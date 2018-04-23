@@ -7,6 +7,9 @@ logBOOK
 
 ## TODO
 
+* [ ] add readme for all the functions
+	(added:23april2019.19h19m; sorted:)
+
 * [ ] Update `ollin_cencah.R` for packages dependencies:
 
 ```
@@ -54,6 +57,9 @@ library(ggplot2) ## percentage of variance bar plot
 
 
 ## SORTED
+
+* [x] adding `functions_extra_nonlinearTseries.R` on 23 April 2018
+
 
 * [x] create an independent repository with proper name  (tavand)
 	[Tools-for-analysis-of-variability-with-nonlinear-dynamics] 
