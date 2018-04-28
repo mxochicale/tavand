@@ -7,6 +7,9 @@ logBOOK
 
 ## TODO
 
+* [ ] add versions for each of the functions when exporting 
+	(added:28april2018.13h36m, sorted:???.???)
+
 * [ ] add readme for all the functions
 	(added:23april2019.19h19m; sorted:)
 

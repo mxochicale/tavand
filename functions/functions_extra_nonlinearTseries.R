@@ -1,6 +1,6 @@
 #------------------------------------------------------------
 #   Extra Functions For nonlinearTseries
-#   
+#   v0.0.0 - 28april2018.13h29m 
 #
 #
 #                        miguel [http://mxochicale.github.io]
@@ -15,15 +15,16 @@
 ## source( paste(github_path,'/tavand/functions/functions_extra_nonlinearTseries.R',sep='') )
 
 
-
-
-################################################################################
-################################################################################
+#################################################################################
 #mirror_repo <- 'https://www.stats.bris.ac.uk/R/'
-#packagename <- 'lattice'
-#if (!require(packagename)) install.packages(packagename, repos=mirror_repo, dependencies = TRUE) 
-library(ggplot2) ## percentage of variance bar plot
+#if (!require("ggplot2")) {
+#install.packages('ggplot2', repos=mirror_repo, dependencies = TRUE) 
+#library(ggplot2)
+#}
 
+
+
+################################################################################
 plotRecurrencePlot <-function (RM,maxsamplerp)
 {
 
@@ -45,14 +46,7 @@ ggplot(RM)+
 
 
 
-
 ################################################################################
-################################################################################
-#mirror_repo <- 'https://www.stats.bris.ac.uk/R/'
-#packagename <- 'lattice'
-#if (!require(packagename)) install.packages(packagename, repos=mirror_repo, dependencies = TRUE) 
-library(ggplot2) ## percentage of variance bar plot
-
 plotOnlyRecurrencePlot <-function (RM,maxsamplerp)
 {
 
@@ -70,18 +64,9 @@ ggplot(RM)+
 # Example: plotOnlyRecurrencePlot(RM,maxsamplerp)
 
 
-
 ################################################################################
-################################################################################
-#mirror_repo <- 'https://www.stats.bris.ac.uk/R/'
-#packagename <- 'lattice'
-#if (!require(packagename)) install.packages(packagename, repos=mirror_repo, dependencies = TRUE) 
-library(ggplot2) ## percentage of variance bar plot
-
 savePlot <-function (filename_extension,width,height,ggplotobject)
 {
-
-
 
 ### Save Picture
 #width = 1000
@@ -102,12 +87,7 @@ ggsave(filename = filename_extension,
              , ggplotobject)
 
 
-
-
-
-
 }
-
 # Usage of savePlot <-function (filename,width,height,ggplotobject)
 # Example: 
 
