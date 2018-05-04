@@ -34,14 +34,11 @@
 
 #if (!require("lattice")) install.packages("lattice")
 library(lattice) ##xyplot
-
-require(tseriesChaos)
+library(latticeExtra)  ##overlay xyplots a + as.layer(b)
 require(rgl)
 
-library(latticeExtra)  ##overlay xyplots a + as.layer(b)
 library(ggplot2) ## percentage of variance bar plot
-
-
+require(tseriesChaos)
 
 
 

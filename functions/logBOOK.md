@@ -7,6 +7,18 @@ logBOOK
 
 ## TODO
 
+
+* [ ] replace the follwing libraries with ggplot2 and plot3D libs
+	```
+	#library(lattice) ##xyplot
+	#library(latticeExtra)  ##overlay xyplots a + as.layer(b)
+	#require(rgl)
+	```
+	and update the lines of code that use those functions
+	(added:4may2018.14h06m, sorted:???.???)
+
+
+
 * [ ] add versions for each of the functions when exporting 
 	(added:28april2018.13h36m, sorted:???.???)
 
