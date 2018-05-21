@@ -7,16 +7,9 @@ setwd("../")
 github_path <- getwd()
 
 
-
-
 library(data.table)
 library(deSolve)
 library(ggplot2)
-library(RColorBrewer)
-
-
-
-
 
 
 
@@ -87,7 +80,6 @@ p <- ggplot(lts) +
    facet_wrap(~type, scales = 'free', nrow = 4)+
    theme_bw(20)
 
-# dev.new(xpos=0,ypos=0,width=18, height=6)
 # p
 
 
@@ -95,7 +87,6 @@ p <- ggplot(lts) +
 ################################################################################
 ## CAO's Algorithm
 ##
-#source('~/mxochicale/github/R/functions/embedding_parameters/withCao1997/cao97_functions.R')
 source(paste(github_path,'/tavand/functions/embedding_parameters/withCao1997/cao97_functions.R', sep=''))
 
 maxdim <- 31
