@@ -1,7 +1,19 @@
+r_scripts_path <- getwd()
+setwd("../")
+setwd("../")
+setwd("../")
+setwd("../")
+setwd("../")
+github_path <- getwd()
+
+
+
+
 library(data.table)
 library(deSolve)
 library(ggplot2)
 library(RColorBrewer)
+
 
 
 
@@ -83,7 +95,8 @@ p <- ggplot(lts) +
 ################################################################################
 ## CAO's Algorithm
 ##
-source('~/mxochicale/github/R/functions/embedding_parameters/withCao1997/cao97_functions.R')
+#source('~/mxochicale/github/R/functions/embedding_parameters/withCao1997/cao97_functions.R')
+source(paste(github_path,'/tavand/functions/embedding_parameters/withCao1997/cao97_functions.R', sep=''))
 
 maxdim <- 31
 maxtau <- 15
@@ -105,41 +118,17 @@ names(E) <- gsub("V2", "E2", names(E))
 
 ################################################################################
 ### Plot E values
-e1 <- ggplot(E) +
-    geom_line( aes(x=dim,y=E1, colour=factor(tau) ),lwd = 3,alpha=0.5)+
-    geom_point( aes(x=dim,y=E1, shape=factor(tau), colour=factor(tau)), size=5, stroke =1 )+
-    scale_color_manual(values = colorRampPalette(brewer.pal(n = 8, name="Blues"))(maxtau) ) +
-    scale_shape_manual(values= 1:(maxtau))+
-    labs(x='Embedding dimension')+
-    coord_cartesian(xlim = c(0, (maxdim-1) ), ylim = c(0, 1.5 ) )+
-    theme(legend.position = c(0.9, 0.3) )+
-    theme( axis.title.x = element_text(size = rel(2.5), angle = 0),
-           axis.text.x = element_text(size = rel(2), angle = 0),
-           axis.title.y = element_text(size = rel(2.5), angle = 90),
-           axis.text.y = element_text(size = rel(2), angle = 90)
-           )+
-    theme(legend.title = element_text(size = rel(1.5)),
-          legend.text = element_text(size = rel(1.5))
-          )
+
+delta_ee<-0.1
+e1<-plotE1values(E,maxdim,maxtau,delta_ee)
 #e1
 
-e2 <- ggplot(E) +
-    geom_line( aes(x=dim,y=E2, colour=factor(tau) ),lwd = 3,alpha=0.5)+
-    geom_point( aes(x=dim,y=E2, shape=factor(tau), colour=factor(tau)), size=5, stroke =1 )+
-    scale_color_manual(values = colorRampPalette(brewer.pal(n = 8, name="Blues"))(maxtau) ) +
-    scale_shape_manual(values= 1:(maxtau))+
-    labs(x='Embedding dimension')+
-    coord_cartesian(xlim = c(0, (maxdim-1) ), ylim = c(0, 1.5 ) )+
-    theme(legend.position = c(0.9, 0.3) )+
-    theme( axis.title.x = element_text(size = rel(2.5), angle = 0),
-           axis.text.x = element_text(size = rel(2), angle = 0),
-           axis.title.y = element_text(size = rel(2.5), angle = 90),
-           axis.text.y = element_text(size = rel(2), angle = 90)
-           )+
-    theme(legend.title = element_text(size = rel(1.5)),
-          legend.text = element_text(size = rel(1.5))
-          )
-
+e2 <- plotE2values(E,maxdim,maxtau)
 #e2
 
-# dev.new(xpos=0,ypos=0,width=18, height=6)
+
+
+#############################################
+setwd(r_scripts_path) ## go back to the r-script source path
+
+

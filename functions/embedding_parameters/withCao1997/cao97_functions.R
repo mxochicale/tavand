@@ -31,7 +31,7 @@
 #to replace NaN values, use
 #X <- replace(X, is.nan(X), 0)
 cao97sub <- function(x,maxd,tau) {
-    dyn.load('~/mxochicale/github/R/functions/embedding_parameters/withCao1997/cao97sub.so')
+    dyn.load('~/mxochicale/github/tavand/functions/embedding_parameters/withCao1997/cao97sub.so')
     lx = length(x)
     retdata <- .Fortran("cao97sub",
                         x = as.double(x),
@@ -293,11 +293,12 @@ e1 <- ggplot(E) +
 
 }
 ##example
+## delta_ee<-0.1
 ##plotE1values(E,maxdim,maxtau,delta_ee)
 
 
 
-plotE2values <- function(E,maxdim,maxtau,delta_ee) {
+plotE2values <- function(E,maxdim,maxtau) {
 
 
 e2 <- ggplot(E) +
@@ -329,6 +330,6 @@ e2 <- ggplot(E) +
 
 }
 ##example
-##plotE2values(E,maxdim,maxtau,delta_ee)
+##plotE2values(E,maxdim,maxtau)
 
 

@@ -73,6 +73,14 @@ library(ggplot2) ## percentage of variance bar plot
 
 ## SORTED
 
+* [x] 	* update `exampleCAO97.R`
+	* update paths using relative path with tavand/...
+	* update `cao97_functions.R` for `plotE2values <- function(E,maxdim,maxtau) {`
+	
+
+	added/sorted: Mon 21 May 18:01:43 BST 2018
+
+
 * [x] adding `functions_extra_nonlinearTseries.R` on 23 April 2018
 
 
