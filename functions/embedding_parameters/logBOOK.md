@@ -126,6 +126,29 @@ sorted: ???
 
 
 
+* [ ] update ami function in state space reconstruciton with the follwoing lines
+	which crease a text message right above the miminum delay embedding: 
+```
+pami <- ggplot(amidt ) + 
+	geom_line(  aes(x=tau,y=ami)  ) +
+	geom_point(  aes(x=tau,y=ami) ) + 
+	#geom_point( aes(x=mintau_idx, y=mintau_val ), size=2, colour='blue', alpha=0.3 ) +
+	geom_point( aes(x=mintau_idx, y=mintau_val, size=1.2, alpha=0.5),  colour='blue'  ) +
+	annotate("text", x = mintau_idx, y = mintau_val+( mintau_val*(10/100)  ), label = paste('First Min=', mintau_idx, sep='') )+	
+	ylab("Average Mutual Information") + 
+	theme_bw(20) +	
+       	theme(axis.text.x = element_text(colour="grey20",size=16,angle=90,hjust=.5,vjust=.5,face="plain")  )+
+	theme(legend.position='none')
+
+```
+
+	added: Sun 27 May 22:09:16 BST 2018    
+	sorted: 
+
+
+
+
+
 
 # SORTED 
 
